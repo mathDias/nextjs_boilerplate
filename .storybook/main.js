@@ -1,10 +1,11 @@
 module.exports = {
   stories: ['../src/components/**/stories.tsx'],
-  "addons": [
-    '@storybook/preset-typescript',
-    "@storybook/addon-links",
+  addons: [
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "storybook-addon-next-router",
   ],
+  core: {
+    builder: 'webpack5'
+  },
   "framework": "@storybook/react"
 }
